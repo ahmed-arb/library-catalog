@@ -1,8 +1,6 @@
+from rest_framework import viewsets
 from core.models import Author, Book, Loan
 from core.serializers import AuthorSerializer, BookSerializer, LoanSerializer
-from rest_framework import viewsets
-from rest_framework.decorators import action
-from rest_framework.response import Response
 
 
 class AuthorViewSet(viewsets.ModelViewSet):

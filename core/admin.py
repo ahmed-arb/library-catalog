@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from core.models import Author, Book, Loan, User
 
-# Register your models here.
+
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     pass
