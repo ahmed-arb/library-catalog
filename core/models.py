@@ -25,18 +25,12 @@ class Book(models.Model):
 
 
 class Loan(models.Model):
-    book = models.ForeignKey(
-        Book, on_delete=models.CASCADE, help_text="Reference field for book."
-    )
-    borrower = models.ForeignKey(
-        User, on_delete=models.CASCADE, help_text="User who borrowed this book"
-    )
+    book = models.ForeignKey(Book, on_delete=models.CASCADE, help_text="Reference field for book.")
+    borrower = models.ForeignKey(User, on_delete=models.CASCADE, help_text="User who borrowed this book")
     date_borrowed = models.DateField(
         help_text="Date field for when the book was borrowed. Format: <em>YYYY-MM-DD</em>."
     )
-    date_due = models.DateField(
-        help_text="Date Field for when the book is due. Format: <em>YYYY-MM-DD</em>."
-    )
+    date_due = models.DateField(help_text="Date Field for when the book is due. Format: <em>YYYY-MM-DD</em>.")
     date_returned = models.DateField(
         null=True,
         blank=True,
